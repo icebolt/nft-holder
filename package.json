@@ -1,0 +1,78 @@
+{
+  "name": "nft-holder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 8000",
+    "build": "next build",
+    "start": "next start --port $PORT",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,css,sass,less,md,json}'",
+    "lint": "npm run lint:es && npm run lint:style",
+    "lint:es": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "lint:style": "stylelint --fix '**/*.{css,sass,less}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "gitmoji"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{css,sass,less}": "stylelint",
+    "**/*.{js,jsx,ts,tsx}": "npm run lint:es",
+    "**/*.{js,jsx,tsx,ts,css,sass,less,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "antd": "^4.15.2",
+    "cheerio": "^1.0.0-rc.6",
+    "next": "10.1.3",
+    "next-iron-session": "^4.1.13",
+    "nprogress": "^0.2.0",
+    "qrcode.react": "^1.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-infinite-scroller": "^1.2.4",
+    "react-masonry-component": "^6.2.1",
+    "react-sizeme": "^3.0.1",
+    "swr": "^0.5.5",
+    "use-clipboard-hook": "^1.1.1",
+    "weibo-util": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/accounting": "^0.4.1",
+    "@types/node": "^14.14.41",
+    "@types/nprogress": "^0.2.0",
+    "@types/qrcode.react": "^1.0.1",
+    "@types/react": "^17.0.3",
+    "@types/react-infinite-scroller": "^1.2.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "commitlint": "^12.1.1",
+    "commitlint-config-gitmoji": "^1.1.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "gitmoji-cli": "^3.4.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.13.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "typescript": "^4.2.4"
+  }
+}

@@ -1,0 +1,148 @@
+.body {
+  width: 100%;
+  height: 100%;
+
+  /* background-image: url(/share-card-bg.png); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body.small {
+  /* background-image: url(/share-card-small-bg.png); */
+}
+
+.body .logo {
+  color: #010101;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 45px;
+}
+
+.body .card {
+  width: 330px;
+  height: 420px;
+  margin-top: 30px;
+
+  /* background-image: url(/share-content-bg.png);
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.body .card.small {
+  height: 221px;
+
+  /* background-image: url(/share-content-small-bg.png); */
+}
+
+.body .info {
+  width: 330px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+
+.body .info.none {
+  margin-top: 40px;
+  flex-direction: column-reverse;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.body .left {
+  margin-top: 20px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+
+  /* color: #fff; */
+  padding: 0 2px;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+.body .left .u + .u {
+  margin-top: 10px;
+}
+
+.body .left .u span {
+  /* color: #fff; */
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.body .left .price {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.body .left .time {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.body .right .qrcode {
+  width: 97px;
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* background-image: url(/share-qrcode-bg.png);
+  background-size: cover; */
+}
+
+.body .info.none .qrcode {
+  width: 117px;
+  height: 135px;
+}
+
+.body .right .qrcode .text {
+  font-size: 12px;
+}
+
+.body .info.none .qrcode .text {
+  font-size: 14px;
+}
+
+.body .hash {
+  width: 330px;
+
+  /* color: #fff; */
+  padding-top: 15px;
+}
+
+.body .btns {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.body .btns .btn {
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: #000;
+  border-color: #000;
+  height: auto;
+  letter-spacing: 8px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .body {
+    border-radius: 10px;
+  }
+}

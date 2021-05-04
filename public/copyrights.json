@@ -1,0 +1,1922 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "copyrights project",
+    "version": "1.0"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v1/blog/events": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BlogEventsResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "bid",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "blog"
+        ]
+      }
+    },
+    "/api/v1/blog/offer/biggest": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/BlogEventResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "bid",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "blog"
+        ]
+      }
+    },
+    "/api/v1/index/percent": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IndexPercentResp"
+            }
+          }
+        },
+        "tags": [
+          "index"
+        ]
+      }
+    },
+    "/api/v1/login": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IndexLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "redirect",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "index"
+        ]
+      }
+    },
+    "/api/v1/login/weibo": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IndexLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "redirect",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "index"
+        ]
+      }
+    },
+    "/api/v1/payment/alipay/callback": {
+      "post": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PaymentCallBackReq"
+            }
+          }
+        ],
+        "tags": [
+          "payment"
+        ]
+      }
+    },
+    "/api/v1/payment/url": {
+      "post": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/PaymentUrlResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PaymentUrlReq"
+            }
+          }
+        ],
+        "tags": [
+          "payment"
+        ]
+      }
+    },
+    "/api/v1/recommend/boutique": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IndexRecommendBoutiqueResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "index"
+        ]
+      }
+    },
+    "/api/v1/recommend/offer": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IndexRecommendResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "index"
+        ]
+      }
+    },
+    "/api/v1/recommend/sell": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IndexRecommendResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "index"
+        ]
+      }
+    },
+    "/api/v1/sms/bind": {
+      "post": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SMSBindReq"
+            }
+          }
+        ],
+        "tags": [
+          "sms"
+        ]
+      }
+    },
+    "/api/v1/sms/captcha": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/SMSCaptchaResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "width",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "sms"
+        ]
+      }
+    },
+    "/api/v1/sms/send": {
+      "post": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SMSSendReq"
+            }
+          }
+        ],
+        "tags": [
+          "sms"
+        ]
+      }
+    },
+    "/api/v1/stat/blog": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatBlogResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "bid",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "stat"
+        ]
+      }
+    },
+    "/api/v1/stat/user": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/StatUserResp"
+            }
+          }
+        },
+        "tags": [
+          "stat"
+        ]
+      }
+    },
+    "/api/v1/test/login": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/IndexLoginResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "redirect",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "index"
+        ]
+      }
+    },
+    "/api/v1/user/blog/events": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserBlogEventsResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "bid",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/bought": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserEventBlogResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/events": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserEventsResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/offer": {
+      "post": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserOfferReq"
+            }
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/offer/biggest": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserBiggestOfferResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "bid",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/offered": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserEventBlogResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/order": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserEventBlogResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/sell": {
+      "post": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserSellReq"
+            }
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/selling": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserEventBlogResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/show": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserShowResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/user/sold": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/UserEventBlogResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "name": "current",
+            "in": "query",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "user"
+        ]
+      }
+    },
+    "/api/v1/weibo/comment": {
+      "post": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {}
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/WeiboCommentReq"
+            }
+          }
+        ],
+        "tags": [
+          "weibo"
+        ]
+      }
+    },
+    "/api/v1/weibo/content": {
+      "get": {
+        "operationId": "",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/WeiboContentResp"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "bid",
+            "in": "query",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "weibo"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "BlogBiggestOfferReq": {
+      "type": "object",
+      "properties": {
+        "bid": {
+          "type": "string"
+        }
+      },
+      "title": "BlogBiggestOfferReq",
+      "required": [
+        "bid"
+      ]
+    },
+    "BlogEventResp": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "time": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "BlogEventResp",
+      "required": [
+        "id",
+        "type",
+        "name",
+        "uid",
+        "amount",
+        "time"
+      ]
+    },
+    "BlogEventsReq": {
+      "type": "object",
+      "properties": {
+        "bid": {
+          "type": "string"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "BlogEventsReq",
+      "required": [
+        "bid",
+        "pageSize",
+        "current"
+      ]
+    },
+    "BlogEventsResp": {
+      "type": "object",
+      "properties": {
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "creatorId": {
+          "type": "string"
+        },
+        "creatorName": {
+          "type": "string"
+        },
+        "ownerId": {
+          "type": "string"
+        },
+        "ownerName": {
+          "type": "string"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BlogEventResp"
+          }
+        }
+      },
+      "title": "BlogEventsResp",
+      "required": [
+        "current",
+        "pageSize",
+        "creatorId",
+        "creatorName",
+        "ownerId",
+        "ownerName",
+        "list"
+      ]
+    },
+    "IndexLoginReq": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "redirect": {
+          "type": "string"
+        }
+      },
+      "title": "IndexLoginReq",
+      "required": [
+        "code",
+        "redirect"
+      ]
+    },
+    "IndexLoginResp": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "expires": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "uid": {
+          "type": "string"
+        }
+      },
+      "title": "IndexLoginResp",
+      "required": [
+        "token",
+        "expires",
+        "uid"
+      ]
+    },
+    "IndexLoginWeiboReq": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "redirect": {
+          "type": "string"
+        }
+      },
+      "title": "IndexLoginWeiboReq",
+      "required": [
+        "code",
+        "redirect"
+      ]
+    },
+    "IndexPercentResp": {
+      "type": "object",
+      "properties": {
+        "percent": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "IndexPercentResp",
+      "required": [
+        "percent"
+      ]
+    },
+    "IndexRecommendBoutiqueData": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "owner_id": {
+          "type": "string"
+        },
+        "owner_name": {
+          "type": "string"
+        },
+        "bid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "data": {
+          "$ref": "#/definitions/interface{}"
+        },
+        "time": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "IndexRecommendBoutiqueData",
+      "required": [
+        "uid",
+        "name",
+        "owner_id",
+        "owner_name",
+        "bid",
+        "amount",
+        "data",
+        "time"
+      ]
+    },
+    "IndexRecommendBoutiqueResp": {
+      "type": "object",
+      "properties": {
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IndexRecommendBoutiqueData"
+          }
+        }
+      },
+      "title": "IndexRecommendBoutiqueResp",
+      "required": [
+        "current",
+        "pageSize",
+        "list"
+      ]
+    },
+    "IndexRecommendData": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "bid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "data": {
+          "$ref": "#/definitions/interface{}"
+        },
+        "time": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "IndexRecommendData",
+      "required": [
+        "uid",
+        "name",
+        "bid",
+        "amount",
+        "data",
+        "time"
+      ]
+    },
+    "IndexRecommendReq": {
+      "type": "object",
+      "properties": {
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "IndexRecommendReq",
+      "required": [
+        "current",
+        "pageSize"
+      ]
+    },
+    "IndexRecommendResp": {
+      "type": "object",
+      "properties": {
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IndexRecommendData"
+          }
+        }
+      },
+      "title": "IndexRecommendResp",
+      "required": [
+        "current",
+        "pageSize",
+        "list"
+      ]
+    },
+    "PaymentCallBackReq": {
+      "type": "object",
+      "properties": {
+        "out_trade_no": {
+          "type": "string"
+        },
+        "trade_status": {
+          "type": "string"
+        },
+        "notify_id": {
+          "type": "string"
+        },
+        "notify_time": {
+          "type": "string"
+        },
+        "total_amount": {
+          "type": "string"
+        },
+        "trade_no": {
+          "type": "string"
+        },
+        "gmt_create": {
+          "type": "string"
+        },
+        "gmt_payment": {
+          "type": "string"
+        }
+      },
+      "title": "PaymentCallBackReq",
+      "required": [
+        "out_trade_no",
+        "trade_status",
+        "notify_id",
+        "notify_time",
+        "total_amount",
+        "trade_no",
+        "gmt_create",
+        "gmt_payment"
+      ]
+    },
+    "PaymentUrlReq": {
+      "type": "object",
+      "properties": {
+        "order_id": {
+          "type": "string"
+        },
+        "return_url": {
+          "type": "string"
+        }
+      },
+      "title": "PaymentUrlReq",
+      "required": [
+        "order_id",
+        "return_url"
+      ]
+    },
+    "PaymentUrlResp": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        }
+      },
+      "title": "PaymentUrlResp",
+      "required": [
+        "url"
+      ]
+    },
+    "SMSBindReq": {
+      "type": "object",
+      "properties": {
+        "tel": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        }
+      },
+      "title": "SMSBindReq",
+      "required": [
+        "tel",
+        "code"
+      ]
+    },
+    "SMSCaptchaReq": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "SMSCaptchaReq",
+      "required": [
+        "width",
+        "height"
+      ]
+    },
+    "SMSCaptchaResp": {
+      "type": "object",
+      "properties": {
+        "captcha_token": {
+          "type": "string"
+        },
+        "captcha_url": {
+          "type": "string"
+        }
+      },
+      "title": "SMSCaptchaResp",
+      "required": [
+        "captcha_token",
+        "captcha_url"
+      ]
+    },
+    "SMSSendReq": {
+      "type": "object",
+      "properties": {
+        "captcha_token": {
+          "type": "string"
+        },
+        "captcha_code": {
+          "type": "string"
+        },
+        "tel": {
+          "type": "string"
+        }
+      },
+      "title": "SMSSendReq",
+      "required": [
+        "captcha_token",
+        "captcha_code",
+        "tel"
+      ]
+    },
+    "StatBlogReq": {
+      "type": "object",
+      "properties": {
+        "bid": {
+          "type": "string"
+        }
+      },
+      "title": "StatBlogReq",
+      "required": [
+        "bid"
+      ]
+    },
+    "StatBlogResp": {
+      "type": "object",
+      "properties": {
+        "number": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "max": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "average": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "StatBlogResp",
+      "required": [
+        "number",
+        "max",
+        "average"
+      ]
+    },
+    "StatUserResp": {
+      "type": "object",
+      "properties": {
+        "soldNumber": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "boughtNumber": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "soldTotal": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "boughtTotal": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "StatUserResp",
+      "required": [
+        "soldNumber",
+        "boughtNumber",
+        "soldTotal",
+        "boughtTotal"
+      ]
+    },
+    "UserBiggestOfferReq": {
+      "type": "object",
+      "properties": {
+        "bid": {
+          "type": "string"
+        }
+      },
+      "title": "UserBiggestOfferReq",
+      "required": [
+        "bid"
+      ]
+    },
+    "UserBiggestOfferResp": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "time": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserBiggestOfferResp",
+      "required": [
+        "id",
+        "uid",
+        "amount",
+        "time"
+      ]
+    },
+    "UserBlogEvent": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "bid": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "time": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserBlogEvent",
+      "required": [
+        "id",
+        "uid",
+        "name",
+        "bid",
+        "amount",
+        "time"
+      ]
+    },
+    "UserBlogEventsReq": {
+      "type": "object",
+      "properties": {
+        "bid": {
+          "type": "string"
+        }
+      },
+      "title": "UserBlogEventsReq",
+      "required": [
+        "bid"
+      ]
+    },
+    "UserBlogEventsResp": {
+      "type": "object",
+      "properties": {
+        "onSale": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserBlogEvent"
+          }
+        },
+        "sold": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserBlogEvent"
+          }
+        }
+      },
+      "title": "UserBlogEventsResp",
+      "required": [
+        "onSale",
+        "sold"
+      ]
+    },
+    "UserBoughtReq": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserBoughtReq",
+      "required": [
+        "uid",
+        "pageSize",
+        "current"
+      ]
+    },
+    "UserEvent": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "bid": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "time": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserEvent",
+      "required": [
+        "id",
+        "type",
+        "uid",
+        "name",
+        "bid",
+        "amount",
+        "time"
+      ]
+    },
+    "UserEventBlog": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "bid": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "data": {
+          "$ref": "#/definitions/interface{}"
+        },
+        "time": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserEventBlog",
+      "required": [
+        "id",
+        "uid",
+        "name",
+        "bid",
+        "amount",
+        "data",
+        "time"
+      ]
+    },
+    "UserEventBlogResp": {
+      "type": "object",
+      "properties": {
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserEventBlog"
+          }
+        }
+      },
+      "title": "UserEventBlogResp",
+      "required": [
+        "current",
+        "pageSize",
+        "list"
+      ]
+    },
+    "UserEventsReq": {
+      "type": "object",
+      "properties": {
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserEventsReq",
+      "required": [
+        "pageSize",
+        "current"
+      ]
+    },
+    "UserEventsResp": {
+      "type": "object",
+      "properties": {
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "list": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserEvent"
+          }
+        }
+      },
+      "title": "UserEventsResp",
+      "required": [
+        "current",
+        "pageSize",
+        "list"
+      ]
+    },
+    "UserOfferReq": {
+      "type": "object",
+      "properties": {
+        "bid": {
+          "type": "string"
+        },
+        "value": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserOfferReq",
+      "required": [
+        "bid",
+        "value"
+      ]
+    },
+    "UserOfferedReq": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserOfferedReq",
+      "required": [
+        "uid",
+        "pageSize",
+        "current"
+      ]
+    },
+    "UserOrderReq": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserOrderReq",
+      "required": [
+        "uid",
+        "pageSize",
+        "current"
+      ]
+    },
+    "UserSellReq": {
+      "type": "object",
+      "properties": {
+        "offer_id": {
+          "type": "string"
+        }
+      },
+      "title": "UserSellReq",
+      "required": [
+        "offer_id"
+      ]
+    },
+    "UserSellingReq": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserSellingReq",
+      "required": [
+        "uid",
+        "pageSize",
+        "current"
+      ]
+    },
+    "UserShowReq": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserShowReq",
+      "required": [
+        "uid"
+      ]
+    },
+    "UserShowResp": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 用户微博id"
+        },
+        "screenName": {
+          "type": "string",
+          "description": " 微博用户名"
+        },
+        "tel": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "string",
+          "description": " 性别"
+        },
+        "credit": {
+          "type": "integer",
+          "format": "int64",
+          "description": " 信用"
+        },
+        "avatar": {
+          "type": "string",
+          "description": " 头像链接"
+        },
+        "avatarLarge": {
+          "type": "string",
+          "description": " 大头像链接`"
+        }
+      },
+      "title": "UserShowResp",
+      "required": [
+        "uid",
+        "screenName",
+        "tel",
+        "gender",
+        "credit",
+        "avatar",
+        "avatarLarge"
+      ]
+    },
+    "UserSoldReq": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "pageSize": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "current": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "UserSoldReq",
+      "required": [
+        "uid",
+        "pageSize",
+        "current"
+      ]
+    },
+    "WeiboApiBlogData": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "mid": {
+          "type": "string"
+        },
+        "bid": {
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/definitions/WeiboApiUserData"
+        }
+      },
+      "title": "WeiboApiBlogData",
+      "required": [
+        "id",
+        "mid",
+        "bid",
+        "user"
+      ]
+    },
+    "WeiboApiResultData": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/WeiboApiBlogData"
+        }
+      },
+      "title": "WeiboApiResultData",
+      "required": [
+        "data"
+      ]
+    },
+    "WeiboApiUserData": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        }
+      },
+      "title": "WeiboApiUserData",
+      "required": [
+        "id"
+      ]
+    },
+    "WeiboCommentReq": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string"
+        },
+        "bid": {
+          "type": "string"
+        }
+      },
+      "title": "WeiboCommentReq",
+      "required": [
+        "uid",
+        "bid"
+      ]
+    },
+    "WeiboContentReq": {
+      "type": "object",
+      "properties": {
+        "bid": {
+          "type": "string"
+        }
+      },
+      "title": "WeiboContentReq",
+      "required": [
+        "bid"
+      ]
+    },
+    "WeiboContentResp": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/interface{}"
+        }
+      },
+      "title": "WeiboContentResp",
+      "required": [
+        "data"
+      ]
+    }
+  },
+  "securityDefinitions": {
+    "apiKey": {
+      "type": "apiKey",
+      "description": "Enter JWT Bearer token **_only_**",
+      "name": "Authorization",
+      "in": "header"
+    }
+  }
+}

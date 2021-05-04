@@ -1,0 +1,60 @@
+.main {
+  width: 525px;
+  border: 1px solid #909fad;
+  border-radius: 8px;
+  padding: 35px 35px 120px;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+}
+
+.main .subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5b5b5b;
+  margin-top: 15px;
+}
+
+.main .btn {
+  margin-top: 35px;
+  background-color: #1858f9;
+  border-color: #1858f9;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  padding: 15px 0;
+  height: auto;
+  border-radius: 4px;
+}
+
+.main .desc {
+  font-size: 12px;
+  color: #222;
+  line-height: 1.5;
+  margin-top: 60px;
+}
+
+.main .desc p {
+  margin-bottom: 0;
+}
+
+.main .desc p + p {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .main {
+    width: 100%;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}

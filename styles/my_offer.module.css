@@ -1,0 +1,34 @@
+.my_offer_page .top_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 14px;
+  height: 295px;
+  background-image: url(/slideshow-bg.png);
+}
+
+.my_offer_page .mid_part .card-flow_list {
+  margin: 0;
+}
+
+.my_offer_page .mid_part .tabs .ant-tabs-tabpane {
+  padding: 0 20px;
+}
+
+.my_offer_page .mid_part .tabs {
+  color: #4c4c4c;
+}
+
+.my_offer_page .mid_part .tabs :global .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #1858f9;
+}
+
+.my_offer_page .mid_part .tabs :global .ant-tabs-tab:hover {
+  color: #1858f9;
+}
+
+.my_offer_page .mid_part .tabs :global .ant-tabs-ink-bar {
+  background-color: #1858f9;
+}

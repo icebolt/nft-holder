@@ -1,0 +1,32 @@
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 85px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.point {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .user {
+    padding-top: 40px;
+  }
+}

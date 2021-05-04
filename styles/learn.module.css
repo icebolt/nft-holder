@@ -1,0 +1,67 @@
+.content {
+  width: 100%;
+  padding-top: 65px;
+  padding-bottom: 48px;
+}
+
+.main {
+  width: 858px;
+  height: 589px;
+  background-image: url(/teaching-bg.png);
+  background-size: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  display: flex;
+}
+
+.side {
+  width: 786px;
+  height: 418px;
+  background-color: #333;
+  overflow: hidden;
+  margin-left: 35px;
+  margin-top: 29px;
+}
+
+.dots li button {
+  background-color: #000 !important;
+  box-shadow: none !important;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.photo .title {
+  position: absolute;
+  z-index: 1;
+  font-size: 32px;
+  font-weight: bold;
+  right: 20px;
+  top: 20px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .main {
+    width: 100%;
+    background-image: none;
+  }
+
+  .side {
+    width: 320px;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  .photo .title {
+    font-size: 24px;
+  }
+}

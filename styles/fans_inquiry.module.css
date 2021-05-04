@@ -1,0 +1,40 @@
+.fans_inquiry_page .top_part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 14px;
+
+  height: 295px;
+  background-image: url(/slideshow-bg.png);
+}
+
+.fans_inquiry_page .mid_part .card-flow_list {
+  margin: 0;
+}
+
+.fans_inquiry_page .mid_part .tabs .ant-tabs-tabpane {
+  padding: 0 20px;
+}
+
+.fans_inquiry_page .mid_part .tabs {
+  color: #4c4c4c;
+}
+
+.fans_inquiry_page
+  .mid_part
+  .tabs
+  :global
+  .ant-tabs-tab-active
+  .ant-tabs-tab-btn {
+  color: #1858f9;
+}
+
+.fans_inquiry_page .mid_part .tabs :global .ant-tabs-tab:hover {
+  color: #1858f9;
+}
+
+.fans_inquiry_page .mid_part .tabs :global .ant-tabs-ink-bar {
+  background-color: #1858f9;
+}

@@ -1,0 +1,270 @@
+.showcase {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.showcase .tools {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 2px;
+}
+
+.showcase .tools .btn {
+  border-radius: 0;
+  border-color: #000;
+  width: 30px;
+  height: 30px;
+}
+
+.showcase .main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 68px;
+}
+
+.showcase .main-loader {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.showcase .main-loader .spin {
+  color: #000;
+}
+
+.showcase .main .win {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
+}
+
+.showcase .main .win .title {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.showcase .main .win .help {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.showcase .main .win .countdown {
+  color: #1858f9;
+}
+
+.showcase .main .send-price {
+  width: 100%;
+  border-bottom: 1px solid #333;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.showcase .main .send-price .prompt {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.showcase .main .send-price .input {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.showcase .main .send-price .input .help {
+  font-size: 14px;
+  color: #878787;
+  padding-top: 15px;
+}
+
+.showcase .main .send-price .input .help p {
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.showcase .main .users {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #646464;
+  font-size: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.showcase .main .users .u + .u {
+  margin-top: 15px;
+}
+
+.showcase .main .users .u span {
+  color: #000;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.showcase .main .statistics {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.showcase .main .statistics .title {
+  font-size: 14px;
+  color: #6a6a6a;
+  padding: 0 5px;
+}
+
+.showcase .main .statistics .count {
+  background-color: #000;
+  color: #fff;
+  height: 45px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.showcase .main .statistics .count.first {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.showcase .main .statistics .count.last {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.showcase .main .statistics .count > span {
+  font-size: 18px;
+}
+
+.showcase .main .statistics .count > i {
+  font-style: normal;
+  margin-left: 5px;
+}
+
+.showcase .main .statistics .count .spin {
+  color: #fff;
+}
+
+.showcase .main .price-info {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
+}
+
+.showcase .main .price-info .title {
+  font-size: 16px;
+}
+
+.showcase .main .price-info .high {
+  font-size: 36px;
+  font-weight: bold;
+  color: #1858f9;
+}
+
+.showcase .main .price-info .high .spin {
+  color: #000;
+}
+
+.showcase .main .btns {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #333;
+}
+
+.showcase .main .btns button {
+  border-radius: 4px;
+  height: auto;
+  padding: 8px 0;
+  font-size: 18px;
+}
+
+.showcase .main .btns .column {
+  width: 70%;
+}
+
+.showcase .main .btns .pay {
+  margin-bottom: 20px;
+  background-color: #1858f9;
+  border-color: #1858f9;
+}
+
+.showcase .main .btns .pay:hover,
+.showcase .main .btns .pay:focus {
+  background-color: #064cff;
+  border-color: #064cff;
+}
+
+.table {
+  width: 100%;
+  padding-bottom: 85px;
+}
+
+.table .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table .loadmore {
+  font-size: 24px;
+  color: #000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.table .loadmore .icon {
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
+.table-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen and (max-width: 575.98px) {
+  .showcase {
+    padding-top: 30px;
+  }
+
+  .showcase .tools {
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .showcase .main {
+    padding-left: 0;
+  }
+
+  .showcase .main .send-price .input .help p {
+    line-height: 1.5;
+  }
+
+  .showcase .main .statistics .title {
+    text-align: center;
+  }
+
+  .showcase .main .btns .column {
+    width: 100%;
+  }
+}
