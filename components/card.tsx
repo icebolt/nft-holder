@@ -56,11 +56,9 @@ export default function Card({
   return (
     <div
       onClick={() => onClick && data && onClick(data.id)}
-      className={`card_item ${styles.card} ${
-        type === 'simple' ? `${styles.simple}` : ''
-      } ${offerIcon ? `${styles['offer-icon']}` : ''} ${
-        onClick ? `${styles.click}` : ''
-      } ${transparentBackground ? `${styles.transparent}` : ''}`}
+      className={`card_item ${styles.card} ${type === 'simple' ? `${styles.simple}` : ''
+        } ${offerIcon ? `${styles['offer-icon']}` : ''} ${onClick ? `${styles.click}` : ''
+        } ${transparentBackground ? `${styles.transparent}` : ''}`}
     >
       {!data && <div>暂无数据</div>}
 
@@ -68,7 +66,7 @@ export default function Card({
         <div className={styles.my_offer_box}>
           <div className={styles.myOfferText}>{myOfferText}</div>
           <div className={styles.my_offer_price_box}>
-            <div className={styles.my_offer_price}>¥300,000.00</div>
+            <div className={styles.my_offer_price}>￥{data && data.quotedPrice?.top}</div>
             {isShowPayBtn && <div className={styles.pay_btn}>支付</div>}
           </div>
           <img className={styles.my_offer_img} src={'/left_top_hold_.png'} />
@@ -78,9 +76,8 @@ export default function Card({
       {data && (
         <>
           <div
-            className={`${styles.box} ${
-              type === 'simple' ? styles.simple : ''
-            }`}
+            className={`${styles.box} ${type === 'simple' ? styles.simple : ''
+              }`}
             style={{
               padding: carousel ? '' : 0
             }}
@@ -196,8 +193,8 @@ export default function Card({
                             // false
                             photoPreview
                               ? {
-                                  maskClassName: styles.mask
-                                }
+                                maskClassName: styles.mask
+                              }
                               : false
                           }
                           src={src}
@@ -257,8 +254,8 @@ export default function Card({
               style={{
                 paddingTop:
                   contentHeight &&
-                  data.thumbnails &&
-                  data.thumbnails.length === 0
+                    data.thumbnails &&
+                    data.thumbnails.length === 0
                     ? 46
                     : 35
               }}

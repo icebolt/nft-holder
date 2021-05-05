@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Tabs } from 'antd'
+import useSWR from 'swr'
 import Layout from '../../components/layout'
 import CardFlow from '../../components/card-flow'
 import Card from '../../components/card'
@@ -17,6 +18,16 @@ const MyOffer = () => {
   useEffect(() => {
     setColumnWidth(isMobile ? window.screen.width - 40 : 362)
   }, [isMobile])
+
+  const {
+    data: sellingData,
+  } = useSWR<any>(`/api/user/selling`)
+  console.log('====>sellingData')
+  console.log(sellingData)
+
+  const {
+    data: offerData,
+  } = useSWR<any>(`/api/user/offer`)
 
   const testData1 = {
     attitudesCount: 11278,
@@ -75,41 +86,44 @@ const MyOffer = () => {
         >
           <Tabs
             // style={{ padding: isMobile ? '0 20px' : 0 }}
+            onChange={(e) => console.log(e)}
             defaultActiveKey="1"
             className={styles.tabs}
             tabBarStyle={{ color: '#4c4c4c', padding: isMobile ? '0 20px' : 0 }}
           >
             <TabPane
               className={styles['ant-tabs-tabpane']}
-              tab={`报价 (${list.length})`}
+              tab={`报价 (${(offerData && offerData.length) || 0})`}
               key="1"
             >
-              <CardFlow columnWidth={columnWidth} gutter={32} resize={resize}>
-                {list.map((item, index) => {
-                  return (
-                    <div
-                      className={styles['list-item']}
-                      style={{ width: columnWidth, marginBottom: 36 }}
-                    >
-                      <Card
-                        myOfferText="我的报价"
-                        key={index}
-                        data={item}
-                        onCarouselChange={onCardCarouselChange}
-                        type="my_offer"
-                      />
-                    </div>
-                  )
-                })}
-              </CardFlow>
+              {
+                (offerData && offerData.length) && <CardFlow columnWidth={columnWidth} gutter={32} resize={resize}>
+                  {offerData.map((item: any, index: number) => {
+                    return (
+                      <div
+                        className={styles['list-item']}
+                        style={{ width: columnWidth, marginBottom: 36 }}
+                      >
+                        <Card
+                          myOfferText="我的报价"
+                          key={index}
+                          data={item}
+                          onCarouselChange={onCardCarouselChange}
+                          type="my_offer"
+                        />
+                      </div>
+                    )
+                  })}
+                </CardFlow>
+              }
             </TabPane>
             <TabPane
-              tab={`待支付 (${list2.length})`}
+              tab={`待支付 (${(sellingData && sellingData.length) || 0})`}
               key="2"
               className={styles['ant-tabs-tabpane']}
             >
               <CardFlow columnWidth={columnWidth} gutter={32} resize={resize}>
-                {list2.map((item, index) => {
+                {(sellingData && sellingData.length) && list2.map((item, index) => {
                   return (
                     <div
                       className={styles['list-item']}
@@ -134,4 +148,5 @@ const MyOffer = () => {
     </Layout>
   )
 }
+
 export default MyOffer
