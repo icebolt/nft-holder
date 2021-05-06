@@ -1,0 +1,21 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/api/user/offer": "pages/api/user/offer.js",
+  "/user/my_offer": "pages/user/my_offer.js",
+  "/api/me": "pages/api/me.js",
+  "/api/user/selling": "pages/api/user/selling.js",
+  "/search": "pages/search.js",
+  "/detail/[id]": "pages/detail/[id].js",
+  "/api/my/win": "pages/api/my/win.js",
+  "/api/records": "pages/api/records.js",
+  "/api/final": "pages/api/final.js",
+  "/api/card/stat": "pages/api/card/stat.js",
+  "/api/offer": "pages/api/offer.js",
+  "/api/my/offer": "pages/api/my/offer.js",
+  "/user/fans_inquiry": "pages/user/fans_inquiry.js",
+  "/api/user/inquiry": "pages/api/user/inquiry.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
+}

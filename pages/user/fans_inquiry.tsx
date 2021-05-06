@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Tabs } from 'antd'
+import useSWR from 'swr'
 import Layout from '../../components/layout'
 import CardFlow from '../../components/card-flow'
 import Card from '../../components/card'
@@ -17,6 +18,10 @@ const FansInquiry = () => {
   useEffect(() => {
     setColumnWidth(isMobile ? window.screen.width - 40 : 362)
   }, [isMobile])
+
+  const {
+    data: fansInquiryData,
+  } = useSWR<any>(`/api/user/inquiry`)
 
   const testData1 = {
     attitudesCount: 11278,
@@ -57,11 +62,11 @@ const FansInquiry = () => {
           >
             <TabPane
               className={styles['ant-tabs-tabpane']}
-              tab={`询价 (${list.length})`}
+              tab={`询价 (${fansInquiryData && fansInquiryData.length || 0})`}
               key="1"
             >
               <CardFlow columnWidth={columnWidth} gutter={32} resize={resize}>
-                {list.map((item, index) => {
+                {(fansInquiryData && fansInquiryData.length) && fansInquiryData.map((item: any, index: number) => {
                   return (
                     <div
                       className={styles['list-item']}
